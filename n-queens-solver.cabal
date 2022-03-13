@@ -27,6 +27,7 @@ library
   exposed-modules:
       GenerateTask
       Lib
+      PrintSolution
   other-modules:
       Paths_n_queens_solver
   hs-source-dirs:
