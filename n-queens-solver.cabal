@@ -25,6 +25,7 @@ source-repository head
 
 library
   exposed-modules:
+      GenerateTask
       Lib
   other-modules:
       Paths_n_queens_solver
@@ -33,6 +34,7 @@ library
   build-depends:
       base >=4.7 && <5
     , mtl ==2.*
+    , picosat
   default-language: Haskell2010
 
 executable n-queens-solver-exe
@@ -46,6 +48,7 @@ executable n-queens-solver-exe
       base >=4.7 && <5
     , mtl ==2.*
     , n-queens-solver
+    , picosat
   default-language: Haskell2010
 
 test-suite n-queens-solver-test
@@ -60,4 +63,5 @@ test-suite n-queens-solver-test
       base >=4.7 && <5
     , mtl ==2.*
     , n-queens-solver
+    , picosat
   default-language: Haskell2010
