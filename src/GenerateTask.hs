@@ -10,5 +10,4 @@ generateTask n = (concat (do
                 (j + k < n, [-(i * n + j + 1), -(i * n + j + k + 1)]),
                 (i + k < n && j + k < n, [-(i * n + j + 1), -((i + k) * n + j + k + 1)]),
                 (i + k < n && j - k >= 0, [-(i * n + j + 1), -((i + k) * n + j - k + 1)])])))
-    ++ (do  i <- [0..(n - 1)]
-            return [(i * n + 1)..((i + 1) * n)])
+    ++ ((\i -> [(i * n + 1)..((i + 1) * n)]) <$> [0..(n - 1)])
